@@ -1,0 +1,31 @@
+# TECS-L Edge Type Configuration
+# Used by BFS subset extraction to filter meaningful vs noise relations
+
+# Domain-meaningful relations (WHITELIST for v1.1)
+hierarchical:
+  - P279   # subclass of
+  - P31    # instance of
+  - P361   # part of
+  - P527   # has part
+
+semantic:
+  - P737   # influenced by
+  - P101   # field of work
+  - P2578  # is studied in
+  - P517   # field of study  ← bridge 실험에서 의미 있는 관계로 확인
+  - P921   # main subject
+  - P1269  # facet of
+  - P461   # opposite of
+  - P1382  # partially coincident with
+
+# Meta/noise relations (BLACKLIST — KG 구조 아티팩트 유발)
+blacklist:
+  - P1343  # described by source (백과사전 참조 → Kevin Bacon effect)
+  - P973   # described at URL
+  - P910   # topic's main category
+  - P1424  # topic's main template
+  - P935   # Commons gallery
+  - P1151  # topic's main Wikimedia portal
+  - P8408  # KBpedia ID
+  - P646   # Freebase ID
+  - P2959  # permanent duplicated item

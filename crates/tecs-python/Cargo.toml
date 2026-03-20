@@ -1,0 +1,13 @@
+[package]
+name = "tecs-python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tecs_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+tecs-core = { path = "../tecs-core" }
+pyo3 = { version = "0.28", features = ["extension-module"] }
+nalgebra = "0.33"

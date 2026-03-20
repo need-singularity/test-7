@@ -1,0 +1,15 @@
+target/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.so
+*.dylib
+*.dSYM/
+*.egg-info/
+dist/
+build/
+*.npy
+*.npz
+data/
+.DS_Store
