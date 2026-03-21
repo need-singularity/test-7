@@ -25,10 +25,10 @@ Phase 1-5 완료 후, 독립적으로 진행하는 확장 실험들.
 
 | # | 실험 | 상태 | 핵심 아이디어 |
 |---|------|------|-------------|
-| A | 푸앵카레 추측 (S³ 복원) | 🔄 진행중 | Ricci flow 근사, 방향 보존 |
-| B | 쌍곡선 임베딩 PH | 🔜 예정 | Poincaré disk 거리, TECS 연동 |
-| C | 푸앵카레 + 쌍곡선 결합 | 🔜 예정 | 쌍곡 Ricci flow (A+B 의존) |
-| D | 새 아이디어 생성 테스트 | 🔄 진행중 | 벽 통과 후 실제 novel output 검증 |
+| A | 푸앵카레 추측 (S³ 복원) | ✅ 구현 | Ollivier-Ricci flow, 방향 보존, MDS 재구성 |
+| B | 쌍곡선 임베딩 PH | ✅ 구현 | Poincaré ball 사영, δ-hyperbolicity, 유클리드 vs 쌍곡 β₁ |
+| C | 푸앵카레 + 쌍곡선 결합 | ✅ 구현 | 유클리드 Ricci vs 쌍곡 Ricci 수렴 비교 |
+| D | 새 아이디어 생성 테스트 | ✅ 구현 | cosine distance + HTML 인간 평가 리포트 |
 
 ---
 
@@ -342,7 +342,12 @@ test-7/
 │   ├── phase3_topological_adapter.py  # Phase 3: 균일 섭동 (실패)
 │   ├── phase3b_nonuniform_adapter.py  # Phase 3b: 비균일 섭동 (성공)
 │   ├── phase4_emergence_optimization.py # Phase 4: emergence 기반 최적화
-│   └── phase5_generation_eval.py      # Phase 5: 생성 품질 비교
+│   ├── phase5_generation_eval.py      # Phase 5: 생성 품질 비교
+│   ├── common.py                      # Exp A-D 공통 유틸리티
+│   ├── expA_ricci_flow.py             # Exp-A: Ricci flow 벽 통과
+│   ├── expB_hyperbolic_ph.py          # Exp-B: 쌍곡선 PH
+│   ├── expC_hyperbolic_ricci.py       # Exp-C: 쌍곡 Ricci flow
+│   └── expD_novel_idea_test.py        # Exp-D: novel idea 생성 검증
 ├── data/
 │   └── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf  # 모델 (git 미추적)
 ├── requirements.txt
