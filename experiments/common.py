@@ -25,7 +25,8 @@ SUFFIXES = [
 def load_model():
     from llama_cpp import Llama
     print("Loading model...")
-    llm = Llama(model_path=str(MODEL_PATH), n_ctx=512, n_gpu_layers=-1,
+    n_gpu = int(__import__('os').environ.get('LLAMA_GPU_LAYERS', '-1'))
+    llm = Llama(model_path=str(MODEL_PATH), n_ctx=512, n_gpu_layers=n_gpu,
                 embedding=True, verbose=False)
     print("Loaded.\n")
     return llm
