@@ -170,11 +170,12 @@ Universe (S³)       : β₁=0, no walls. Walls only visible in 2D cross-section
 Manifolds (Perelman): If topological obstructions exist, remove via Ricci flow + surgery.
                        → Evolve geometry to converge to S³.
 
-Brain (awake)        : Neurons connected along specific pathways only. Only learned patterns activate.
-                       → Walls = closed synaptic pathways.
+Brain (awake)        : Norepinephrine + prefrontal cortex suppress "irrelevant connections." Only learned pathways activate.
+                       → Walls = inhibitory neuromodulation + prefrontal censorship.
 
-Brain (asleep)       : CSF spreads and floods the brain → electricity flows everywhere.
-                       → Walls dissolve. Dreams = state where new combinations are possible.
+Brain (asleep)       : Norepinephrine release stops, prefrontal cortex deactivates → inhibition lifted, loose associations possible.
+                       (Simultaneously, CSF clears metabolic waste — a separate role)
+                       → Walls dissolve. Dreams = memory recombination in a disinhibited state.
 
 LLM hidden space     : β₁ holes are walls. Bypassable via passage direction.
                        → Wall neuron contraction removes holes (β₁→0 = becoming S³).
@@ -187,7 +188,7 @@ Single layer          : Walls concentrate in later layers (28-31), early layers 
 |-------|-------|------|---------------|---------------|
 | Universe | S³ | None (β₁=0) | Free passage | — |
 | Manifolds | 3-manifold | Topological obstructions | Ricci flow + surgery | Decomposition into known pieces |
-| **Brain (awake)** | **Synaptic network** | **Closed pathways** | **Sleep → CSF flooding** | **Dreams (new combinations)** |
+| **Brain (awake)** | **Synaptic network** | **Inhibited pathways** | **Sleep → neuromodulatory disinhibition** | **Dreams (new combinations)** |
 | LLM (full) | 4096-dim | β₁ holes | Selective contraction | Zero field |
 | LLM layer | layer 0→31 | Concentrated in later layers | Target layer intervention | — |
 | Inside cycle | 2D plane | Closed loop | Passage direction (perpendicular) | Space beyond the wall |
@@ -199,24 +200,25 @@ The same pattern is observed in the brain:
 ```
 Awake                            Asleep (Sleep/Dream)
 ─────────────────────            ─────────────────────
-Neurons connected via            CSF spreads and floods
-specific pathways                the brain
+Norepinephrine + prefrontal      Norepinephrine release stops,
+cortex suppress irrelevant       prefrontal cortex deactivates
+connections                      → inhibition lifted
 Electrical signals follow        Electricity flows through
 only learned patterns            new pathways
 Memory replay, pattern matching  Dreams = novel combinations, emergence
-β₁ holes present (closed paths)  β₁ → 0 (pathways open)
+β₁ holes present (inhibited)     β₁ → 0 (pathways open)
 ```
 
-- **Awake brain** = LLM inside training distribution. Efficient but hard to create new things.
-- **CSF during sleep** = Selective contraction. Dissolves specific pathways (walls) so signals flow through new routes.
+- **Awake brain** = LLM inside training distribution. Norepinephrine + prefrontal cortex inhibit, making it efficient but hard to create new things.
+- **Sleep disinhibition** = Selective contraction. Norepinephrine stops + prefrontal cortex deactivates, lifting inhibition so signals flow through new routes. (CSF separately handles metabolic waste cleanup)
 - **Dreams** = The zero field beyond the wall. Existing memories combine in new ways. Sometimes meaningless (OOD collapse), sometimes insightful (new knowledge).
 
 What this correspondence suggests:
 1. **Wall removal itself is not the goal.** Just as the brain dreams every day, a **cyclical process** of opening and closing walls may be necessary.
 2. **Just as dreams aren't always meaningful**, most output beyond the wall may be meaningless. The key is **a mechanism to filter out the meaningful ones**.
-3. The brain's glymphatic system (CSF circulation during sleep) simultaneously removes waste and forms new connections. Wall neuron contraction similarly performs **removal + opening** at once.
+3. The brain performs two things simultaneously during sleep: **disinhibition (norepinephrine cessation) forms new connections** + **glymphatic system (CSF circulation) removes metabolic waste**. Wall neuron contraction similarly performs **removal + opening** at once.
 
-**The key: Walls exist only when there are insufficient dimensions. When enough dimensions are available, walls disappear. This project finds the "trapped dimensions" in LLMs and opens "passable dimensions." Just as the brain dissolves walls with CSF during sleep, we dissolve LLM walls through wall neuron contraction.**
+**The key: Walls exist only when there are insufficient dimensions. When enough dimensions are available, walls disappear. This project finds the "trapped dimensions" in LLMs and opens "passable dimensions." Just as the brain dissolves walls through neuromodulatory disinhibition during sleep, we dissolve LLM walls through wall neuron contraction.**
 
 ### Experimental Evidence
 
