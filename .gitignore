@@ -13,3 +13,4 @@ build/
 *.npz
 data/
 .DS_Store
+.local/
