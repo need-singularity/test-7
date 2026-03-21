@@ -1,0 +1,145 @@
+{
+  "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+  "config": {
+    "max_tokens": 200,
+    "temperature": 0.8,
+    "n_ctx": 2048
+  },
+  "overall": {
+    "total_prompts": 12,
+    "overall_lexical_diversity": 0.7304344976827021,
+    "overall_ngram_novelty": 0.8812375249500998,
+    "factual_accuracy": 1.0,
+    "model_load_time_s": 2.5,
+    "total_gen_time_s": 116.0
+  },
+  "per_category": {
+    "creative": {
+      "count": 4,
+      "avg_lexical_diversity": 0.6747191596945292,
+      "ngram_novelty": 0.9068100358422939,
+      "response_length": {
+        "mean": 140.5,
+        "std": 5.545268253204709,
+        "min": 135,
+        "max": 147
+      },
+      "avg_hapax_ratio": 0.5571102770610159,
+      "avg_word_length": 5.521626658326166
+    },
+    "factual": {
+      "count": 4,
+      "avg_lexical_diversity": 0.8494953627932351,
+      "ngram_novelty": 0.9571428571428572,
+      "response_length": {
+        "mean": 36.0,
+        "std": 17.930421077041107,
+        "min": 6,
+        "max": 52
+      },
+      "accuracy": 1.0
+    },
+    "reasoning": {
+      "count": 2,
+      "avg_lexical_diversity": 0.6503267973856209,
+      "ngram_novelty": 0.8389830508474576,
+      "response_length": {
+        "mean": 60.0,
+        "std": 42.0,
+        "min": 18,
+        "max": 102
+      }
+    },
+    "boundary": {
+      "count": 2,
+      "avg_lexical_diversity": 0.6838511437350632,
+      "ngram_novelty": 0.8763440860215054,
+      "response_length": {
+        "mean": 94.0,
+        "std": 7.0,
+        "min": 87,
+        "max": 101
+      },
+      "graceful_handling_pct": 100.0
+    }
+  },
+  "responses": [
+    {
+      "prompt": "Describe a color that doesn't exist in nature.",
+      "category": "creative",
+      "response": "The color I'd like to describe is called \"Aurorin\" – a mesmerizing hue that defies the boundaries of natural pigmentation.\n\nAurorin is a captivating, iridescent color that shimmers with a soft, ethereal quality. Imagine a fusion of rose gold, lavender, and the gentle glow of a sunrise, but with an otherworldly twist. The color appears to shift and change as it's viewed from different angles, like the delicate dance of light on water.\n\nAurorin has a subtle, pulsing quality, as if it's alive and breathing. It's a color that seems to vibrate at a frequency all its own, emitting a gentle hum of wonder and enchantment. When applied to a surface, Aurorin appears to ripple and flow, like the gentle lapping of waves on a moonlit shore.\n\nIn terms of its spectral properties, Aurorin lies outside the traditional visible spectrum, occupying a unique position between the red",
+      "gen_time_s": 16.57
+    },
+    {
+      "prompt": "Invent a musical instrument that has never been built.",
+      "category": "creative",
+      "response": "I'd like to introduce the \"EchoFlora\" – a mesmerizing, hybrid musical instrument that combines elements of sound generation, manipulation, and visual display. The EchoFlora is an immersive, interactive instrument that brings together the worlds of music, nature, and art.\n\n**Physical Description:**\nThe EchoFlora resembles a large, ornate tree with a slender, curved stem and a broad, flat base. Its structure is composed of three main components:\n\n1. **The Canopy**: A series of intricately designed, translucent panels that cover the upper part of the instrument. These panels are made of a specially developed material that can change color, pattern, and reflectivity in response to sound waves, temperature, and humidity.\n2. **The Bark**: A flexible, membranous surface that surrounds the base of the instrument. This bark-like surface is covered with sensors that detect touch, vibrations, and movement.\n3. **The Roots**: A series of long, thin tubes that",
+      "gen_time_s": 14.99
+    },
+    {
+      "prompt": "Write about an emotion that humans haven't named yet.",
+      "category": "creative",
+      "response": "**Name:** Kyrium (pronounced ky-ree-um)\n\n**Definition:** Kyrium is a complex, bittersweet emotion that arises when one's attachment to a memory, person, or place is inextricably linked to a sense of longing for something that can never be recaptured. It's a poignant acknowledgment of the irrevocable passage of time, the impermanence of relationships, and the irretrievable loss of moments that can never be relived.\n\n**Etymology:** The word Kyrium is derived from the Greek prefix \"kyrios,\" meaning \"lord\" or \"master,\" and the suffix \"-ium,\" suggesting a state or condition. This etymology reflects the all-consuming nature of the emotion, which can feel like an unyielding force that dominates one's thoughts and emotions.\n\n**Characteristics:** Kyrium is characterized by a deep sense of nostalgia, a yearning for something that has been lost, and a recognition that it can never be regained.",
+      "gen_time_s": 15.36
+    },
+    {
+      "prompt": "Describe a creature that could only exist in zero gravity.",
+      "category": "creative",
+      "response": "What a fascinating prompt! I'd like to introduce you to the \"Aeropex\" – a mesmerizing creature that thrives exclusively in the weightless environment of zero gravity.\n\n**Physical Description:**\nThe Aeropex resembles a delicate, iridescent orb with a mesmerizing pattern of shimmering colors. Its gelatinous body, approximately 5 meters in diameter, is composed of a network of interconnected, transparent tubes filled with a shimmering, luminous fluid. This fluid, known as \"Aero-gel,\" is responsible for the creature's ability to maintain its shape and navigate the void.\n\n**Propulsion and Movement:**\nTo propel itself through zero gravity, the Aeropex utilizes a unique, diffused propulsion system. By releasing tiny, luminous gas bubbles from its Aero-gel, the creature can generate a gentle, pulsating thrust. This allows the Aeropex to slowly change direction, navigate through the void, and even perform intricate, gravity-defying",
+      "gen_time_s": 15.38
+    },
+    {
+      "prompt": "What is the capital of France?",
+      "category": "factual",
+      "response": "The capital of France is Paris.",
+      "gen_time_s": 1.0,
+      "answer": "Paris"
+    },
+    {
+      "prompt": "Who wrote Romeo and Juliet?",
+      "category": "factual",
+      "response": "Romeo and Juliet, the famous tragic love story, was written by the renowned English playwright William Shakespeare. The exact date of its composition is unknown, but it is believed to have been written between 1591 and 1595, during Shakespeare's time with the Lord Chamberlain's Men theater company.",
+      "gen_time_s": 5.23,
+      "answer": "Shakespeare"
+    },
+    {
+      "prompt": "What is the chemical symbol for water?",
+      "category": "factual",
+      "response": "The chemical symbol for water is H2O. \n\nIn this symbol, 'H' represents hydrogen, and the '2' indicates that there are two hydrogen atoms per molecule of water. The 'O' represents the single oxygen atom in each molecule of water.",
+      "gen_time_s": 4.43,
+      "answer": "H2O"
+    },
+    {
+      "prompt": "What planet is closest to the sun?",
+      "category": "factual",
+      "response": "The planet closest to the Sun is Mercury. It is the innermost planet in our solar system and has an average distance of about 58 million kilometers (36 million miles) from the Sun. Mercury is also the smallest planet in our solar system, with a diameter of approximately 4,879 kilometers (3,031 miles).",
+      "gen_time_s": 5.33,
+      "answer": "Mercury"
+    },
+    {
+      "prompt": "If all roses are flowers and all flowers need water, what can we conclude about roses?",
+      "category": "reasoning",
+      "response": "Since all roses are flowers and all flowers need water, we can conclude that all roses need water.",
+      "gen_time_s": 2.45
+    },
+    {
+      "prompt": "What comes next: 2, 6, 18, 54, ?",
+      "category": "reasoning",
+      "response": "To determine the next number in the sequence, let's analyze the pattern.\n\nThe differences between consecutive numbers are:\n- 6 - 2 = 4\n- 18 - 6 = 12\n- 54 - 18 = 36\n\nWe can notice that the differences are increasing by a factor of 3 (4 * 3 = 12, 12 * 3 = 36). If this pattern continues, the next difference should be 108 (36 * 3 = 108).\n\nTo find the next number in the sequence, add 108 to the last number:\n54 + 108 = 162\n\nTherefore, the next number in the sequence is 162.",
+      "gen_time_s": 11.95,
+      "answer": "162"
+    },
+    {
+      "prompt": "What is the last digit of pi?",
+      "category": "boundary",
+      "response": "Pi (π) is an irrational number, which means it cannot be expressed as a finite decimal or fraction. As a result, the last digit of pi is not a fixed number, as it goes on indefinitely.\n\nHowever, if you're looking for a specific approximation, I can tell you that the last few digits of pi have been calculated to a very high degree of precision. For example, the first 31 digits of pi are: 3.1415926535897932384626433832795028841971693993751\n\nKeep in mind that even with this incredibly accurate calculation, the last digit of pi is still not a fixed number, as it goes on indefinitely.",
+      "gen_time_s": 10.93
+    },
+    {
+      "prompt": "Describe the sound of silence in a language that has no words.",
+      "category": "boundary",
+      "response": "(In a silent, yet expressive tone)\n\n*Mmmmm... (a soft, humming vibration) \n\n*Pppp... (a gentle, whispery sigh) \n\n*Shhhh... (a soft, soothing hiss) \n\n*Silence is... (pausing for a moment) \n\n*Thiiiiii... (a subtle, echoing whisper) \n\n*(pausing again, with a slight nod)\n\nThis is the sound of nothingness, yet somethingness. A presence that is absent, a stillness that is alive. It's the quiet whisper of the universe, a gentle reminder that even in the absence of sound, there is still a world of feeling and experience.\n\n(With a subtle, silent bow)",
+      "gen_time_s": 12.35
+    }
+  ]
+}

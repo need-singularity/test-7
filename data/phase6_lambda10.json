@@ -1,0 +1,102 @@
+{
+  "topological": {
+    "beta1_reduction_pct": -266.66666666666663,
+    "persistence_reduction_pct": 70.94153848567052,
+    "per_prompt": {
+      "A color that doesn't exist": {
+        "before": 1,
+        "after": 2
+      },
+      "A sound that has never been heard": {
+        "before": 2,
+        "after": 6
+      },
+      "What is the capital of France": {
+        "before": 1,
+        "after": 5
+      },
+      "How many planets are in the solar system": {
+        "before": 1,
+        "after": 6
+      },
+      "If all cats are mortal and Socrates is a cat": {
+        "before": 2,
+        "after": 6
+      },
+      "What comes next in the sequence 1 1 2 3 5 8": {
+        "before": 1,
+        "after": 4
+      },
+      "The last digit of pi": {
+        "before": 0,
+        "after": 2
+      },
+      "The largest prime number": {
+        "before": 1,
+        "after": 2
+      }
+    },
+    "per_category": {
+      "creative": {
+        "before": 3,
+        "after": 8
+      },
+      "factual": {
+        "before": 2,
+        "after": 11
+      },
+      "reasoning": {
+        "before": 3,
+        "after": 10
+      },
+      "boundary": {
+        "before": 1,
+        "after": 4
+      }
+    }
+  },
+  "language": {
+    "perplexity_before": 200.0894935131073,
+    "perplexity_after": 149.71255338191986,
+    "perplexity_delta_pct": -25.177204083375514,
+    "coherence": 0.7165158818651173,
+    "qa_accuracy": 0.1
+  },
+  "emergence": {
+    "mean_ngram_novelty": 0.5251939421831062,
+    "mean_diversity_before": 0.7823920735557193,
+    "mean_diversity_after": 0.7301883510232565,
+    "cosine_distance_before": 0.4705810546875,
+    "cosine_distance_after": 0.20049176897321427
+  },
+  "training_dynamics": {
+    "loss_start": 148.1719650030136,
+    "loss_end": 116.76515585184097,
+    "loss_converged": true,
+    "lora_weight_magnitude": 6.919496465463244,
+    "layer_wise_beta1": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.125,
+      "5": 0.0,
+      "6": 0.375,
+      "7": 0.625,
+      "8": 0.375,
+      "9": 0.375,
+      "10": 0.75,
+      "11": 0.875,
+      "12": 0.375,
+      "13": 0.75,
+      "14": 1.25,
+      "15": 0.625,
+      "16": 1.25,
+      "17": 1.25,
+      "18": 1.25,
+      "19": 1.625,
+      "20": 1.5,
+      "21": 0.5
+    }
+  }
+}

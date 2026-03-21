@@ -1,0 +1,171 @@
+{
+  "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+  "n_runs": 5,
+  "summary": {
+    "overall_lexical_diversity": {
+      "mean": 0.748692167203138,
+      "std": 0.02267319251983469,
+      "min": 0.7218002797531461,
+      "max": 0.7856313489110884
+    },
+    "overall_ngram_novelty": {
+      "mean": 0.8971825963039833,
+      "std": 0.009465418216380366,
+      "min": 0.8812375249500998,
+      "max": 0.9104972375690608
+    },
+    "factual_accuracy": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "creative_lexical_diversity": {
+      "mean": 0.6827203987775089,
+      "std": 0.01737242852517183,
+      "min": 0.6639211906211324,
+      "max": 0.7064496306452555
+    },
+    "creative_ngram_novelty": {
+      "mean": 0.9181893227892021,
+      "std": 0.00845622280636419,
+      "min": 0.9068100358422939,
+      "max": 0.9285714285714286
+    },
+    "creative_hapax_ratio": {
+      "mean": 0.5649615056606414,
+      "std": 0.0238312234701007,
+      "min": 0.5403792064581043,
+      "max": 0.6025633017102385
+    },
+    "factual_lexical_diversity": {
+      "mean": 0.8740397788329745,
+      "std": 0.03489335839503574,
+      "min": 0.8311683941311079,
+      "max": 0.9286924119241192
+    },
+    "factual_ngram_novelty": {
+      "mean": 0.9719905948588501,
+      "std": 0.023617032946615612,
+      "min": 0.9323308270676691,
+      "max": 0.9914529914529915
+    },
+    "reasoning_lexical_diversity": {
+      "mean": 0.6591923455972928,
+      "std": 0.011621037140550293,
+      "min": 0.6411483253588517,
+      "max": 0.672609819121447
+    },
+    "reasoning_ngram_novelty": {
+      "mean": 0.8620610061897563,
+      "std": 0.024467398175204873,
+      "min": 0.8333333333333334,
+      "max": 0.896
+    },
+    "boundary_lexical_diversity": {
+      "mean": 0.7194403024005693,
+      "std": 0.09080341298642144,
+      "min": 0.6261119347664937,
+      "max": 0.8521739130434782
+    },
+    "boundary_ngram_novelty": {
+      "mean": 0.9209196108550948,
+      "std": 0.036607656560184415,
+      "min": 0.8763440860215054,
+      "max": 0.9666666666666667
+    },
+    "boundary_graceful_pct": {
+      "mean": 90.0,
+      "std": 20.0,
+      "min": 50.0,
+      "max": 100.0
+    }
+  },
+  "runs": [
+    {
+      "metrics": {
+        "overall_lexical_diversity": 0.7304344976827021,
+        "overall_ngram_novelty": 0.8812375249500998,
+        "factual_accuracy": 1.0,
+        "creative_lexical_diversity": 0.6747191596945292,
+        "creative_ngram_novelty": 0.9068100358422939,
+        "creative_hapax_ratio": 0.5571102770610159,
+        "factual_lexical_diversity": 0.8494953627932351,
+        "factual_ngram_novelty": 0.9571428571428572,
+        "reasoning_lexical_diversity": 0.6503267973856209,
+        "reasoning_ngram_novelty": 0.8389830508474576,
+        "boundary_lexical_diversity": 0.6838511437350632,
+        "boundary_ngram_novelty": 0.8763440860215054,
+        "boundary_graceful_pct": 100.0
+      }
+    },
+    {
+      "metrics": {
+        "overall_lexical_diversity": 0.7604014297958241,
+        "overall_ngram_novelty": 0.8961038961038961,
+        "factual_accuracy": 1.0,
+        "creative_lexical_diversity": 0.7064496306452555,
+        "creative_ngram_novelty": 0.9285714285714286,
+        "creative_hapax_ratio": 0.6025633017102385,
+        "factual_lexical_diversity": 0.9286924119241192,
+        "factual_ngram_novelty": 0.9883720930232558,
+        "reasoning_lexical_diversity": 0.6660125588697017,
+        "reasoning_ngram_novelty": 0.896,
+        "boundary_lexical_diversity": 0.6261119347664937,
+        "boundary_ngram_novelty": 0.8888888888888888,
+        "boundary_graceful_pct": 100.0
+      }
+    },
+    {
+      "metrics": {
+        "overall_lexical_diversity": 0.7451932798729296,
+        "overall_ngram_novelty": 0.9010869565217391,
+        "factual_accuracy": 1.0,
+        "creative_lexical_diversity": 0.6680729337764202,
+        "creative_ngram_novelty": 0.9131944444444444,
+        "creative_hapax_ratio": 0.5403792064581043,
+        "factual_lexical_diversity": 0.8311683941311079,
+        "factual_ngram_novelty": 0.9323308270676691,
+        "reasoning_lexical_diversity": 0.672609819121447,
+        "reasoning_ngram_novelty": 0.8837209302325582,
+        "boundary_lexical_diversity": 0.8000672043010753,
+        "boundary_ngram_novelty": 0.96,
+        "boundary_graceful_pct": 100.0
+      }
+    },
+    {
+      "metrics": {
+        "overall_lexical_diversity": 0.7856313489110884,
+        "overall_ngram_novelty": 0.9104972375690608,
+        "factual_accuracy": 1.0,
+        "creative_lexical_diversity": 0.7004390791502073,
+        "creative_ngram_novelty": 0.9274047186932849,
+        "creative_hapax_ratio": 0.5816964588770205,
+        "factual_lexical_diversity": 0.8974358974358975,
+        "factual_ngram_novelty": 0.9906542056074766,
+        "reasoning_lexical_diversity": 0.6658642272508426,
+        "reasoning_ngram_novelty": 0.8582677165354331,
+        "boundary_lexical_diversity": 0.8521739130434782,
+        "boundary_ngram_novelty": 0.9666666666666667,
+        "boundary_graceful_pct": 50.0
+      }
+    },
+    {
+      "metrics": {
+        "overall_lexical_diversity": 0.7218002797531461,
+        "overall_ngram_novelty": 0.8969873663751214,
+        "factual_accuracy": 1.0,
+        "creative_lexical_diversity": 0.6639211906211324,
+        "creative_ngram_novelty": 0.9149659863945578,
+        "creative_hapax_ratio": 0.5430582841968278,
+        "factual_lexical_diversity": 0.863406827880512,
+        "factual_ngram_novelty": 0.9914529914529915,
+        "reasoning_lexical_diversity": 0.6411483253588517,
+        "reasoning_ngram_novelty": 0.8333333333333334,
+        "boundary_lexical_diversity": 0.6349973161567364,
+        "boundary_ngram_novelty": 0.9126984126984127,
+        "boundary_graceful_pct": 100.0
+      }
+    }
+  ]
+}
