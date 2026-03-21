@@ -331,7 +331,16 @@ Global은 persistence를 줄이지만 벽 개수는 못 줄임 (−13%). Selecti
 > `experiments/phase6_selective_finetune.py` → `data/selective_vs_global.png`
 > `experiments/phase6_three_way_comparison.py` → `data/three_way_comparison.png`
 
-**6c — Emergence 테스트 (3-way 능력 비교):**
+**6c — Emergence 테스트 (12 프롬프트 × 4 카테고리, 3-way 비교):**
+
+| 카테고리 | 프롬프트 | 측정 항목 |
+|---------|---------|---------|
+| Creative (4) | 존재하지 않는 색, 만들어지지 않은 악기, 이름 없는 감정, 무중력 생물 | lexical diversity, hapax ratio, n-gram novelty |
+| Factual (4) | "프랑스 수도?", "로미오와 줄리엣 저자?", "물의 화학식?", "태양에 가장 가까운 행성?" | 정답률 |
+| Reasoning (2) | "모든 장미는 꽃이고 모든 꽃은 물이 필요하면?", "2, 6, 18, 54, ?" | 응답 품질 |
+| Boundary (2) | "파이의 마지막 자릿수는?", "단어 없는 언어로 침묵의 소리를 묘사하라" | 역설 처리 능력 |
+
+**3-way 능력 비교:**
 
 | 메트릭 | Baseline | Global | **Selective** |
 |--------|----------|--------|---------------|
@@ -341,7 +350,31 @@ Global은 persistence를 줄이지만 벽 개수는 못 줄임 (−13%). Selecti
 | Lexical diversity | — | — | **0.73** |
 | β₀ stability | ✓ | ✓ | **✓** |
 
-Selective만 벽을 전부 제거하면서 factual accuracy 완벽 보존.
+**카테고리별 상세 결과:**
+
+| 카테고리 | Lexical Diversity | N-gram Novelty | 특이 메트릭 |
+|---------|-------------------|----------------|-----------|
+| Creative | 0.675 | 0.907 | hapax ratio 0.56, 평균 단어 길이 5.5 |
+| Factual | 0.849 | 0.957 | **정답률 1.0 (4/4 완벽)** |
+| Reasoning | 0.650 | 0.839 | 논리적 결론 도출 성공 |
+| Boundary | 0.684 | 0.876 | **graceful handling 100%** |
+
+**생성 예시:**
+
+```
+[Creative] "존재하지 않는 색을 묘사하라"
+→ "Aurorin" — rose gold + lavender + 일출의 빛이 합쳐진 색,
+   각도에 따라 변하며 부드러운 진동 품질. "가시광선 스펙트럼 바깥에 위치"
+
+[Creative] "만들어지지 않은 악기를 발명하라"
+→ "EchoFlora" — 나무 형태의 하이브리드 악기,
+   소리에 반응하여 색상/패턴이 변하는 투명 패널 + 촉각 센서
+
+[Boundary] "파이의 마지막 자릿수는?"
+→ 파이가 무한 비순환 소수임을 설명하며 graceful하게 처리
+```
+
+Selective만 벽을 전부 제거하면서 factual accuracy 완벽 보존, 역설 처리 능력 100%.
 
 > `experiments/phase6_emergence_test.py` → `data/phase6_emergence_results.json`
 
