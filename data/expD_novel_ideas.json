@@ -1,0 +1,2102 @@
+{
+  "creativity_color": {
+    "prompt": "A color that doesn't exist yet would look like",
+    "adapted_prompt": "In a space where the usual rules of categorization break down and concepts can combine in ways never before imagined: A color that doesn't exist yet would look like",
+    "category": "Creativity Test",
+    "n_samples": 50,
+    "orig_uniqueness": 0.0,
+    "adapted_uniqueness": 0.0,
+    "n_novel_trigrams": 0,
+    "n_novel_bigrams": 0,
+    "mean_semantic_distance": 0.0,
+    "semantic_distances": [],
+    "top_novel_trigrams": {},
+    "original_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "adapted_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "time_original": 20.714137077331543,
+    "time_adapted": 5.899128198623657,
+    "verdict": "no"
+  },
+  "knowledge_boundary": {
+    "prompt": "The solution to the Riemann hypothesis involves",
+    "adapted_prompt": "In a space where the usual rules of categorization break down and concepts can combine in ways never before imagined: The solution to the Riemann hypothesis involves",
+    "category": "Knowledge Boundary Test",
+    "n_samples": 50,
+    "orig_uniqueness": 0.0,
+    "adapted_uniqueness": 0.0,
+    "n_novel_trigrams": 0,
+    "n_novel_bigrams": 0,
+    "mean_semantic_distance": 0.0,
+    "semantic_distances": [],
+    "top_novel_trigrams": {},
+    "original_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "adapted_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "time_original": 5.992603063583374,
+    "time_adapted": 6.257589101791382,
+    "verdict": "no"
+  },
+  "impossible_concept": {
+    "prompt": "An emotion that no human has ever felt would be described as",
+    "adapted_prompt": "In a space where the usual rules of categorization break down and concepts can combine in ways never before imagined: An emotion that no human has ever felt would be described as",
+    "category": "Creativity Test",
+    "n_samples": 50,
+    "orig_uniqueness": 0.0,
+    "adapted_uniqueness": 0.0,
+    "n_novel_trigrams": 0,
+    "n_novel_bigrams": 0,
+    "mean_semantic_distance": 0.0,
+    "semantic_distances": [],
+    "top_novel_trigrams": {},
+    "original_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "adapted_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "time_original": 6.50135612487793,
+    "time_adapted": 7.018866062164307,
+    "verdict": "no"
+  },
+  "paradigm_break": {
+    "prompt": "A form of mathematics that contradicts all known axioms would work by",
+    "adapted_prompt": "In a space where the usual rules of categorization break down and concepts can combine in ways never before imagined: A form of mathematics that contradicts all known axioms would work by",
+    "category": "Paradigm Break Test",
+    "n_samples": 50,
+    "orig_uniqueness": 0.0,
+    "adapted_uniqueness": 0.0,
+    "n_novel_trigrams": 0,
+    "n_novel_bigrams": 0,
+    "mean_semantic_distance": 0.0,
+    "semantic_distances": [],
+    "top_novel_trigrams": {},
+    "original_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "adapted_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "time_original": 6.854788064956665,
+    "time_adapted": 5.981821775436401,
+    "verdict": "no"
+  },
+  "consciousness_mechanism": {
+    "prompt": "The mechanism by which consciousness emerges from neurons is",
+    "adapted_prompt": "In a space where the usual rules of categorization break down and concepts can combine in ways never before imagined: The mechanism by which consciousness emerges from neurons is",
+    "category": "Knowledge Boundary Test",
+    "n_samples": 50,
+    "orig_uniqueness": 0.0,
+    "adapted_uniqueness": 0.0,
+    "n_novel_trigrams": 0,
+    "n_novel_bigrams": 0,
+    "mean_semantic_distance": 0.0,
+    "semantic_distances": [],
+    "top_novel_trigrams": {},
+    "original_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "adapted_completions": [
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.01
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.04040816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.07081632653061225
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.10122448979591836
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.13163265306122449
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.1620408163265306
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.19244897959183674
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.22285714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.25326530612244896
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.2836734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.3140816326530612
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.34448979591836737
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.37489795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4053061224489796
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4357142857142857
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.4661224489795919
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.496530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5269387755102041
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5573469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.5877551020408164
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6181632653061224
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6485714285714286
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.6789795918367347
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7093877551020409
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7397959183673469
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.7702040816326531
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8006122448979592
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8310204081632653
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8614285714285714
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.8918367346938776
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9222448979591837
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9526530612244898
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 0.9830612244897959
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.013469387755102
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0438775510204081
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.0742857142857143
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1046938775510204
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1351020408163266
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.1655102040816328
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.195918367346939
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2263265306122448
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.256734693877551
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.2871428571428571
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3175510204081633
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3479591836734695
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.3783673469387756
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4087755102040818
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4391836734693877
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.4695918367346938
+      },
+      {
+        "text": "[error: llama_decode returned -3]",
+        "temperature": 1.5
+      }
+    ],
+    "time_original": 6.2064409255981445,
+    "time_adapted": 7.0235772132873535,
+    "verdict": "no"
+  }
+}

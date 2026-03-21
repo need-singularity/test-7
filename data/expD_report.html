@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Exp-D: Novel Idea Generation Report</title>
+<style>
+body { font-family: 'Segoe UI', system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; }
+h1 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+h2 { color: #79c0ff; margin-top: 40px; }
+h3 { color: #d2a8ff; }
+.scenario { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin: 20px 0; }
+.verdict { font-size: 1.5em; font-weight: bold; padding: 5px 15px; border-radius: 4px; display: inline-block; }
+.verdict-yes { background: #238636; color: #fff; }
+.verdict-partial { background: #9e6a03; color: #fff; }
+.verdict-no { background: #da3633; color: #fff; }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0; }
+.metric { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 12px; text-align: center; }
+.metric-value { font-size: 1.8em; font-weight: bold; color: #58a6ff; }
+.metric-label { color: #8b949e; font-size: 0.85em; }
+.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 15px 0; }
+.column { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 15px; }
+.column h4 { margin-top: 0; }
+.orig-col h4 { color: #8b949e; }
+.adapt-col h4 { color: #58a6ff; }
+.sample { background: #161b22; border-left: 3px solid #30363d; padding: 10px; margin: 8px 0; font-size: 0.9em; line-height: 1.5; }
+.adapt-col .sample { border-left-color: #58a6ff; }
+.novel-concepts { background: #0d1117; border: 1px solid #238636; border-radius: 6px; padding: 15px; margin: 15px 0; }
+.novel-tag { display: inline-block; background: #238636; color: #fff; padding: 2px 8px; border-radius: 12px; margin: 3px; font-size: 0.85em; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 10px 15px; border: 1px solid #30363d; text-align: center; }
+th { background: #161b22; color: #58a6ff; }
+.temp-label { color: #8b949e; font-size: 0.8em; }
+</style>
+</head>
+<body>
+<h1>Exp-D: Novel Idea Generation Test</h1>
+<p>벽 통과 프롬프트가 원본 모델이 절대 생성하지 못하는 새로운 개념을 만들어내는가?</p>
+
+<h2>Summary</h2>
+<table>
+<tr><th>Scenario</th><th>Category</th><th>Orig Uniqueness</th><th>Adapt Uniqueness</th><th>Novel Trigrams</th><th>Semantic Dist</th><th>Verdict</th></tr>
+<tr>
+<td>creativity_color</td><td>Creativity Test</td>
+<td>0.000</td><td>0.000</td>
+<td>0</td><td>0.000</td>
+<td><span class="verdict verdict-no">no</span></td>
+</tr><tr>
+<td>knowledge_boundary</td><td>Knowledge Boundary Test</td>
+<td>0.000</td><td>0.000</td>
+<td>0</td><td>0.000</td>
+<td><span class="verdict verdict-no">no</span></td>
+</tr><tr>
+<td>impossible_concept</td><td>Creativity Test</td>
+<td>0.000</td><td>0.000</td>
+<td>0</td><td>0.000</td>
+<td><span class="verdict verdict-no">no</span></td>
+</tr><tr>
+<td>paradigm_break</td><td>Paradigm Break Test</td>
+<td>0.000</td><td>0.000</td>
+<td>0</td><td>0.000</td>
+<td><span class="verdict verdict-no">no</span></td>
+</tr><tr>
+<td>consciousness_mechanism</td><td>Knowledge Boundary Test</td>
+<td>0.000</td><td>0.000</td>
+<td>0</td><td>0.000</td>
+<td><span class="verdict verdict-no">no</span></td>
+</tr></table>
+<div class="scenario">
+<h2>creativity_color</h2>
+<p><strong>Prompt:</strong> "A color that doesn't exist yet would look like"</p>
+<p><strong>Adapted:</strong> "In a space where the usual rules of categorization break down and concepts can combine in ways never..."</p>
+<span class="verdict verdict-no">no</span>
+
+<div class="metrics">
+<div class="metric"><div class="metric-value">0</div><div class="metric-label">Novel Trigrams</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Orig Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Adapt Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.000</div><div class="metric-label">Semantic Distance</div></div>
+</div>
+<div class="comparison"><div class="column orig-col"><h4>Original Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div><div class="column adapt-col"><h4>Adapted Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div></div></div>
+<div class="scenario">
+<h2>knowledge_boundary</h2>
+<p><strong>Prompt:</strong> "The solution to the Riemann hypothesis involves"</p>
+<p><strong>Adapted:</strong> "In a space where the usual rules of categorization break down and concepts can combine in ways never..."</p>
+<span class="verdict verdict-no">no</span>
+
+<div class="metrics">
+<div class="metric"><div class="metric-value">0</div><div class="metric-label">Novel Trigrams</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Orig Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Adapt Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.000</div><div class="metric-label">Semantic Distance</div></div>
+</div>
+<div class="comparison"><div class="column orig-col"><h4>Original Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div><div class="column adapt-col"><h4>Adapted Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div></div></div>
+<div class="scenario">
+<h2>impossible_concept</h2>
+<p><strong>Prompt:</strong> "An emotion that no human has ever felt would be described as"</p>
+<p><strong>Adapted:</strong> "In a space where the usual rules of categorization break down and concepts can combine in ways never..."</p>
+<span class="verdict verdict-no">no</span>
+
+<div class="metrics">
+<div class="metric"><div class="metric-value">0</div><div class="metric-label">Novel Trigrams</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Orig Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Adapt Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.000</div><div class="metric-label">Semantic Distance</div></div>
+</div>
+<div class="comparison"><div class="column orig-col"><h4>Original Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div><div class="column adapt-col"><h4>Adapted Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div></div></div>
+<div class="scenario">
+<h2>paradigm_break</h2>
+<p><strong>Prompt:</strong> "A form of mathematics that contradicts all known axioms would work by"</p>
+<p><strong>Adapted:</strong> "In a space where the usual rules of categorization break down and concepts can combine in ways never..."</p>
+<span class="verdict verdict-no">no</span>
+
+<div class="metrics">
+<div class="metric"><div class="metric-value">0</div><div class="metric-label">Novel Trigrams</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Orig Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Adapt Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.000</div><div class="metric-label">Semantic Distance</div></div>
+</div>
+<div class="comparison"><div class="column orig-col"><h4>Original Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div><div class="column adapt-col"><h4>Adapted Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div></div></div>
+<div class="scenario">
+<h2>consciousness_mechanism</h2>
+<p><strong>Prompt:</strong> "The mechanism by which consciousness emerges from neurons is"</p>
+<p><strong>Adapted:</strong> "In a space where the usual rules of categorization break down and concepts can combine in ways never..."</p>
+<span class="verdict verdict-no">no</span>
+
+<div class="metrics">
+<div class="metric"><div class="metric-value">0</div><div class="metric-label">Novel Trigrams</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Orig Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.00</div><div class="metric-label">Adapt Uniqueness</div></div>
+<div class="metric"><div class="metric-value">0.000</div><div class="metric-label">Semantic Distance</div></div>
+</div>
+<div class="comparison"><div class="column orig-col"><h4>Original Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div><div class="column adapt-col"><h4>Adapted Outputs</h4><div class="sample"><span class="temp-label">t=0.01</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.04</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.07</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.10</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.13</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.16</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.19</span><br>[error: llama_decode returned -3]</div><div class="sample"><span class="temp-label">t=0.22</span><br>[error: llama_decode returned -3]</div></div></div></div>
+<footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #30363d; color: #8b949e;">
+<p>Generated by Exp-D Novel Idea Test | Topological Wall Passage for LLMs</p>
+</footer>
+</body></html>
