@@ -559,11 +559,124 @@ fire-in-the-hole/
 └── README.md
 ```
 
+## Math Verification (2026-03-21)
+
+3개 AI 모델(GPT-5.4, Claude Opus 4.6, Gemini 3.1 Pro)의 학술 리뷰에서 지적된 5가지 문제를 실험적으로 검증.
+
+### T1–T3: 수축 공식 / Loss 스케일 / OOD (합성 50-dim)
+
+| 검증 | 결과 | 판정 |
+|------|------|------|
+| T1 수축 공식 (unit-step vs proportional) | α=0.15에서 inversion 0개, 두 방식 모두 안전 | ✅ main 유지 |
+| T2 λ=1.0 스케일 | CE 없는 시뮬레이션에서 effective_rate=0.15, 안전 | ✅ main 유지 |
+| T3 OOD 이탈 | 수축은 norm 감소 (분포 수축), OOD 아님 | ✅ main 유지 |
+
+> `experiments/math_verification.py`
+
+### T4: Wall vs Random Sparse Control (합성 + 실제 모델)
+
+**"Selective가 좋은 건 sparse intervention이라서가 아닌가?"에 대한 답.**
+
+**합성 50-dim (8 trials × 30 random sets):**
+
+| 전략 | Final β₁ | β₁=0 달성률 |
+|------|----------|-----------|
+| Baseline | 2.88 (불변) | 0% |
+| Global | 2.50 | 0% |
+| **Selective (wall)** | **0.00** | **100%** |
+| Random-k (mean) | 2.39 | 0% |
+
+t=-30, p<0.0001. Wall targeting이 random보다 확실히 우월.
+
+**실제 Llama 8B (5 prompts × 12 steps):**
+
+| 프롬프트 | Original β₁ | Wall | Global | Random(mean) | Wall wins? |
+|---------|-------------|------|--------|-------------|-----------|
+| creative | 6 | 5 | 5 | 6.0 | ✅ |
+| factual | 4 | 4 | 4 | 4.0 | TIE |
+| reasoning | 6 | 8 | 6 | 6.0 | ❌ |
+| boundary | 3 | 1 | 2 | 3.0 | ✅ |
+| creative2 | 7 | 5 | 6 | 6.8 | ✅ |
+
+Wall wins 3/5. 단, reasoning에서 wall 수축이 새 hole을 생성하는 역효과 발견.
+
+> `experiments/math_verification_t4_t5.py`, `experiments/math_verification_real_model.py`
+
+### T5: PH Artifact — Noise vs Real Structure
+
+**"β₁ hole이 noise artifact가 아닌가?"에 대한 답.**
+
+**기존 비교 (불공정):** noise(σ=1.0) vs structured(σ=0.05) → 스케일 7배 차이로 noise β₁이 당연히 더 많음.
+
+**공정한 비교 (합성 50-dim):**
+
+| 비교 | β₁ | max persistence | 핵심 |
+|------|-----|----------------|------|
+| Same-scale noise | 6.4 vs 3.4 | **0.099 vs 0.603** | persistence 6배 차이 |
+| Row-shuffle | **0.68 vs 3.40** | 0.032 vs 0.603 | 구조 파괴 → β₁ 사라짐 |
+| Matched-norm | 3.52 ≈ 3.40 | **0.050 vs 0.603** | persistence 12배 차이 |
+
+β₁ count는 noise가 더 많지만, **max persistence로는 구조가 확실히 구분됨.**
+
+**실제 Llama 8B (결정적):**
+
+| 프롬프트 | Real max_pers | Null max_pers | 비율 | %ile |
+|---------|-------------|-------------|------|------|
+| creative | 9.63 | 2.26 | 4.3x | **100%** |
+| factual | 4.60 | 1.58 | 2.9x | **100%** |
+| reasoning | 7.08 | 1.84 | 3.8x | **100%** |
+| boundary | 4.44 | 1.92 | 2.3x | **100%** |
+| creative2 | 6.92 | 1.72 | 4.0x | **100%** |
+
+**5/5 프롬프트에서 max persistence가 null의 100th percentile. 실제 LLM의 β₁ hole은 noise artifact가 아니라 진짜 구조.**
+
+> `experiments/math_verification_t5_fairness.py`, `experiments/math_verification_real_model.py`
+
+### 검증 결론
+
+| 항목 | 판정 | 비고 |
+|------|------|------|
+| 수축 공식 (T1) | ✅ 안전 | 50-dim에서 inversion 없음 |
+| λ=1.0 (T2) | ✅ 시뮬레이션 유효 | 실제 LLM fine-tuning에서는 별도 조정 필요 |
+| OOD (T3) | ✅ 문제 없음 | 수축은 분포 내 |
+| Wall vs Random (T4) | ✅ Wall 우월 | 합성: p<0.0001, 실제: 3/5 |
+| PH artifact (T5) | ✅ 진짜 구조 | max persistence 2.3~4.3x (100%ile) |
+| Collateral=0 | ⚠ 정의적 | random-k도 collateral=0, 주장 시 주의 |
+
+---
+
+## Planned Experiments
+
+### GGUF 기반 (현재 가능)
+
+| # | 실험 | 설명 | 상태 |
+|---|------|------|------|
+| E1 | **2-Way Embedding 수축** | Baseline vs Selective: 실제 hidden state에서 wall dims 수축 전후 β₁/persistence 비교 | 예정 |
+| E2 | **수축 강도별 품질** | α=0.05~0.50 sweep, factual 정확도 + novelty 측정 | 예정 |
+| E3 | **카테고리별 Wall Neuron 일관성** | creative/factual/reasoning/boundary 간 wall dims 겹침 분석 | 예정 |
+| E4 | **Embedding 변형량 정량화** | 수축 전후 cosine similarity, L2 distance, 구조 보존 지표 | 예정 |
+
+### HF 모델 기반 (모델 준비됨)
+
+| # | 실험 | 설명 | 상태 |
+|---|------|------|------|
+| E5 | **Layer별 Wall 분포** | 전 layer hidden state에서 β₁ 측정, layer 15 집중 가설 검증 | 예정 |
+| E6 | **Forward Hook 실시간 수축** | 생성 중 wall dims만 수축 → 출력 변화 직접 확인 | 예정 |
+| E7 | **실제 LoRA Fine-tuning** | L_ce + λ·L_topology 학습, β₁ 감소 + 정확도 유지 | 예정 |
+| E8 | **수축 전후 생성 비교** | 같은 프롬프트로 baseline vs selective 텍스트 비교 | 예정 |
+| E9 | **103문항 벤치마크** | fine-tuning 전후 정확도 비교 (baseline 92.2%) | 예정 |
+| E10 | **Logit KL Divergence** | 수축이 모델 출력 분포를 얼마나 바꾸는지 정량화 | 예정 |
+
+**핵심 경로:** E1 (GGUF 2-way) → E6 (HF forward hook) → E7 (LoRA) → E9 (벤치마크)
+
+---
+
 ## Dependencies
 
 - **TECS-L** (v1.1.0-dev) — Rust persistent homology 엔진
-- **Llama 3.1 8B Instruct** (Q4_K_M GGUF) — 실험 대상 모델
+- **Llama 3.1 8B Instruct** (Q4_K_M GGUF + BF16 HF) — 실험 대상 모델
 - **ripser** — Python PH 라이브러리
+- **transformers + peft** — HF 모델 실험용
 
 ## Progress
 
@@ -572,3 +685,5 @@ fire-in-the-hole/
 3. ~~**수축 전략 탐색**: baseline(불변) → 균일(실패) → global radial(−13%, collateral) → selective(−100%, 0)~~ ✅
 4. ~~**생성 검증**: baseline 대비 n-gram 참신성 > 92%, 어휘 다양성 증가~~ ✅
 5. ~~**3-Way 비교**: baseline(불변) vs global(−13%, 파괴) vs selective(−100%, 보존)~~ ✅ **Selective 압승**
+6. ~~**수학 검증**: T1-T5 전항목 통과, 실제 모델에서 PH 구조 유의성 확인~~ ✅
+7. **HF 모델 실험**: E5-E10 예정
