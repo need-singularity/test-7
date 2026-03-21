@@ -77,47 +77,69 @@ Phase 1-5 완료 후, 독립적으로 진행하는 확장 실험들.
 
 ---
 
-## Next Experiments (TODO)
+## Extension Experiment Results
 
-### Exp-A: 푸앵카레 추측 (S³ 방향 보존) 기반 벽 통과
+### Exp-A — Ricci Flow 벽 통과 (❌ 실패, 2026-03-21)
 
-페렐만이 증명한 푸앵카레 추측의 핵심:
+Ollivier-Ricci curvature 기반 flow로 k-NN 그래프의 β₁ hole 수축 시도.
 
-> 단일 연결된(simply connected) 닫힌 3차원 다양체는 3차원 구(S³)와 위상동형이다.
+| 카테고리 | β₁ orig | β₁ final | Best β₁ | Iter | Dir.Pres | Score |
+|---------|---------|----------|---------|------|----------|-------|
+| factual | 4 | 4 | 3 | 16 | 0.036 | 0.283 |
+| creative | 6 | 8 | 4 | 4 | 0.034 | 0.297 |
+| reasoning | 6 | 7 | 6 | 0 | -0.027 | 0.283 |
+| boundary | 3 | 8 | 3 | 0 | -0.034 | 0.282 |
 
-**적용 아이디어:**
-- LLM 잠재 공간이 "구멍 없이 닫혀 있다면" S³과 동형 → 모든 루프가 수축 가능
-- β₁ hole이 있다 = 단일 연결이 아니다 = S³이 아닌 다양체에 갇혀 있다
-- 벽 통과 = β₁ hole을 수축시켜 단일 연결 조건을 복원 → S³로 회복
-- S³ 방향 보존: 오른쪽으로 출발 → 왼쪽에서 귀환, 방향(orientation) 불변
-- 이것을 adapter에 적용: 섭동 후에도 임베딩의 방향성이 보존되는지 검증
+**Phase 4 Radial과 비교:**
 
-**구현 포인트:**
-- Ricci flow 근사로 hole 수축 (현재 radial 수축의 이론적 기반)
-- 방향 보존 조건을 adapter 제약으로 추가
-- β₁=0 도달 시 "S³ 복원" 판정
+| 카테고리 | Radial β₁ (α) | Ricci β₁ (iter) | 승자 |
+|---------|--------------|-----------------|------|
+| factual | 1 (α=53) | 4 (iter=16) | **Radial** |
+| creative | **0** (α=18) | 8 (iter=4) | **Radial** |
+| reasoning | 1 (α=49) | 7 (iter=0) | **Radial** |
+| boundary | **0** (α=8) | 8 (iter=0) | **Radial** |
 
-### Exp-B: 비유클리드 기하학 — 쌍곡선 임베딩 배치
+**결론:**
+- Ricci flow는 β₁ 감소에 실패 — 50회 iteration에서도 β₁→0 미달성
+- **방향 보존 완전 붕괴** (cosine similarity 0.03~-0.03, 무작위 수준)
+- 이산 Ricci flow가 n=25~32 노드의 작은 그래프에서 연속 flow를 근사하기 어려움
+- **radial perturbation이 이론적으로 덜 우아하지만 실용적으로 압도적 우위**
 
-**적용 아이디어:**
-- 현재: 유클리드 거리 → PH → β₁ 감지
-- 개선: 쌍곡선(Poincaré disk) 거리로 PH 계산
-- TECS에 이미 `hyperbolic/sarkar.rs` (Sarkar 임베딩), `hyperbolicity.rs` (δ-hyperbolicity) 구현 있음
-- LLM 잠재 공간은 계층적 구조 → 쌍곡 거리가 유클리드보다 정확할 수 있음
+> `experiments/expA_ricci_flow.py`
 
-**구현 포인트:**
-- hidden states → Poincaré ball 임베딩 (exponential map)
-- 쌍곡 거리 행렬 → VR complex → PH
-- 유클리드 vs 쌍곡에서 β₁ 감지 비교
-- δ-hyperbolicity로 "이 공간이 얼마나 쌍곡적인가" 측정
+---
 
-### Exp-C: 푸앵카레 + 쌍곡선 결합
+### Exp-B — 유클리드 vs 쌍곡선 PH 비교 (2026-03-21)
 
-**적용 아이디어:**
-- Exp-A + Exp-B 결합
-- 쌍곡 공간에서 S³ 방향 보존 조건의 벽 통과
-- Ricci flow를 쌍곡 메트릭에서 실행
-- 가장 이론적으로 완전한 형태
+동일 point cloud에서 유클리드 거리 vs Poincaré ball 쌍곡 거리로 β₁ 비교.
+
+| 카테고리 | δ-hyper | H.Score | E.β₁ | H.β₁ | Δβ₁ | E.MaxP | H.MaxP |
+|---------|---------|---------|------|------|-----|--------|--------|
+| factual | 21.95 | 0.044 | 4 | 10 | +6 | 4.603 | 0.144 |
+| factual2 | 21.52 | 0.044 | 5 | 11 | +6 | 9.471 | 0.181 |
+| reasoning | 28.28 | 0.034 | 6 | 14 | +8 | 7.081 | 0.254 |
+| creative | 25.03 | 0.038 | 6 | 10 | +4 | 9.631 | 0.217 |
+| creative2 | 23.35 | 0.041 | 7 | 17 | +10 | 6.916 | 0.177 |
+| boundary | 21.66 | 0.044 | 3 | 13 | +10 | 4.445 | 0.168 |
+| boundary2 | 23.21 | 0.041 | 3 | 12 | +9 | 6.222 | 0.169 |
+
+**핵심 발견:**
+- **δ-hyperbolicity 평균 23.6** — 매우 높음 (트리=0). Llama 8B 잠재 공간은 **비쌍곡적**
+- Hierarchy score 평균 0.041 (1.0이 완벽한 트리) → 트리 구조 거의 없음
+- **쌍곡 거리에서 β₁이 오히려 +4~10 증가** — 쌍곡 사영이 노이즈를 증폭
+- 쌍곡 persistence는 극히 낮음 (0.14~0.25) — 감지된 hole이 의미 없는 노이즈
+- **결론: LLM 잠재 공간에 쌍곡 PH 적용은 부적합. 유클리드 PH가 올바른 선택**
+
+> `experiments/expB_hyperbolic_ph.py`
+
+---
+
+### Exp-C — 쌍곡 Ricci Flow (⏭️ 스킵)
+
+Exp-A (Ricci flow 실패) + Exp-B (공간이 비쌍곡적) → 결합 실험의 전제가 무너짐.
+쌍곡 공간에서 Ricci flow를 실행해도 의미있는 결과를 기대할 수 없어 스킵.
+
+> `experiments/expC_hyperbolic_ricci.py` (코드 구현 완료, 실행 불필요)
 
 ---
 
