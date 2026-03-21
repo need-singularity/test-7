@@ -212,7 +212,7 @@ def get_passage_direction(embeddings, wall):
     cycle_points = embeddings[verts]
     center = cycle_points.mean(axis=0)
     cycle_centered = cycle_points - center
-    local_dim = min(len(verts) - 1, 10)
+    local_dim = min(len(verts) - 1, 10, embeddings.shape[1])
     if local_dim < 1:
         return None, None
 
