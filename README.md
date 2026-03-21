@@ -10,6 +10,116 @@ This project detects walls using persistent homology and removes them by **selec
 
 ---
 
+## The Ceiling: Form vs Substance
+
+There is a well-known ceiling in LLMs: **they cannot create facts that do not exist in their training data.**
+
+We ran experiments asking an 8B model (with wall contraction enabled) to generate genuinely new knowledge — novel mathematical theorems, scientific hypotheses, cross-domain discoveries. The results precisely locate where the ceiling sits:
+
+```
+What LLMs can do vs. cannot do:
+
+Form (structure)     ████████████████████ ← possible
+──────────────────── ceiling ────────────────────
+Substance (meaning)  ░░░░░░░░░░░░░░░░░░░ ← impossible
+```
+
+**Why form works:**
+- LLMs learn the patterns of academic papers: definition → lemma → theorem → proof
+- They know symbol composition rules: H₁, ∏, ∂M — which contexts these appear in
+- Generating "text that looks like a math proof" is a language task
+
+**Why substance fails:**
+- Verifying that each step logically follows from the previous requires not "the next plausible token" but **"is this inference valid?"**
+- LLMs compute P(next token | preceding text), not P(true | axioms)
+
+**Analogy:**
+
+| Capability | Analogy |
+|---|---|
+| LLM doing math | A scribe who can copy sheet music but cannot hear the notes |
+| Real math | A composer who hears the music and writes the score |
+
+The scribe can combine patterns from existing scores to produce new ones. Occasionally, by chance, the result may be a good piece. But the scribe can never hear it, so they cannot tell good from bad.
+
+**Evidence — the PTIT experiment:**
+
+We asked the model to "derive a new theorem connecting prime numbers and topological invariants." It produced the **Prime Topological Invariant Theorem (PTIT)** — complete with definitions, a novel inequality, and a multi-page proof using homology groups, Euler characteristics, and localization.
+
+The form was impeccable. The substance was invalid:
+- `H₁(M) = ∏[H₁(∂Mᵢ)]` — looks right in the pattern of math notation, but is mathematically incorrect
+- The final inequality's derivation contains logical gaps that break the proof
+
+**Refined definition of the ceiling:**
+
+> **Separation of form and substance** — LLMs freely manipulate the *form* of knowledge (structure, notation, patterns), but cannot access its *substance* (truth value, validity, meaning).
+
+| Strategy | Score (1-10) | Notes |
+|---|---|---|
+| Baseline prompt | 3 | Repackages known approaches under new names |
+| First-principles prompt | 5 | Structural (LRI/RALG concept) but same essence |
+| PTIT (math theorem) | 4 | Form created, substance invalid |
+| Constrained computation | 2 | Arithmetic itself was wrong |
+| Self-refutation loop | 1 | "Rediscovered" a known fact |
+| Form=content domain | 2 | Failed to enumerate; never reached the answer |
+
+---
+
+## 천장: 형식 vs 내용
+
+LLM에게는 잘 알려진 천장이 있다: **학습 데이터에 없는 사실을 만들어낼 수 없다.**
+
+8B 모델(벽 수축 활성화)에 진정으로 새로운 지식 — 새로운 수학 정리, 과학 가설, 분야 간 발견 — 을 생성하도록 요청하는 실험을 수행했다. 결과는 천장이 정확히 어디에 있는지를 보여준다:
+
+```
+LLM이 할 수 있는 것 vs 없는 것:
+
+형식(form)     ████████████████████ ← 여기까지 가능
+─────────────── 천장 ───────────────
+의미(substance) ░░░░░░░░░░░░░░░░░░░ ← 여기부터 불가
+```
+
+**왜 형식은 되는가:**
+- 수학 논문의 패턴을 학습함: 정의 → 보조정리 → 정리 → 증명
+- 기호 조합 규칙을 알음: H₁, ∏, ∂M 이런 게 어떤 맥락에서 나오는지
+- "수학 증명처럼 보이는 텍스트"를 생성하는 건 언어 과제
+
+**왜 내용은 안 되는가:**
+- 증명의 각 단계가 이전 단계에서 논리적으로 따라나오는지 확인하려면, 그건 "다음에 올 그럴듯한 토큰"이 아니라 **"이 추론이 유효한가"**의 문제
+- LLM은 P(다음 토큰 | 앞 텍스트)를 계산하지, P(참 | 공리)를 계산하지 않음
+
+**비유:**
+
+| 능력 | 비유 |
+|---|---|
+| LLM의 수학 | 악보를 베껴 쓸 수 있지만 음을 들을 수 없는 필경사 |
+| 진짜 수학 | 음을 듣고 악보를 쓰는 작곡가 |
+
+필경사가 기존 악보 패턴을 조합해서 새 악보를 만들 수 있음. 가끔 우연히 좋은 곡일 수도 있음. 하지만 본인이 그걸 들어볼 수 없으니 좋은지 나쁜지 모름.
+
+**증거 — PTIT 실험:**
+
+모델에게 "소수와 위상적 불변량을 연결하는 새로운 정리를 유도하라"고 요청. **Prime Topological Invariant Theorem (PTIT)** 을 생성 — 정의, 새로운 부등식, 호몰로지 군·오일러 특성·국소화를 사용한 여러 페이지 증명까지 포함.
+
+형식은 완벽했다. 내용은 무효였다:
+- `H₁(M) = ∏[H₁(∂Mᵢ)]` → 수학 표기 패턴상 그럴듯하지만, 수학적으로 틀림
+- 최종 부등식의 유도에 증명을 깨뜨리는 논리적 비약이 있음
+
+**천장의 정밀한 정의:**
+
+> **형식과 내용의 분리** — LLM은 지식의 *형식*(구조, 표기, 패턴)을 자유롭게 조작하지만, *내용*(진리값, 유효성, 의미)에는 접근할 수 없다.
+
+| 전략 | 점수 (1-10) | 비고 |
+|---|---|---|
+| 기본 프롬프트 | 3 | 기존 방법을 새 이름으로 재포장 |
+| First-principles 유도 | 5 | 구조적 (LRI/RALG 개념)이나 본질은 동일 |
+| PTIT (수학 정리) | 4 | 형식 생성, 내용 무효 |
+| 범위 좁혀 계산 유도 | 2 | 계산 자체가 틀림 |
+| 자기 반박 루프 | 1 | 이미 알려진 사실을 "재발견" |
+| 형식=내용 영역 | 2 | 열거 실패, 본문 도달 못함 |
+
+---
+
 ## Key Results: Baseline vs Global vs Selective
 
 Three-way comparison of the base model (no contraction) / Global (all dimensions contracted) / Selective (only wall dimensions contracted).
