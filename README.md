@@ -224,7 +224,7 @@ LLM hidden space  : β₁ hole이 벽. passage direction으로 우회 가능.
 | 다른 차원(passage)은 보존됨 | E4: non-wall signal 정확히 0% 변화 | ✅ |
 | 벽은 후기 layer에 편재 (특이점 시간 편재와 대응) | E5: layer 28-31에 max persistence 집중 | ✅ |
 | 전체 수축은 무효 (차원 구분 없이는 통과 불가) | E1: Global β₁ 불변 (8/8) | ✅ |
-| **벽 제거 → 실제 능력 변화** | E6-E7 (forward hook + LoRA) | **미검증** |
+| **벽 제거 → 실제 출력 변화** | E6: L31 수축 시 "Glintzen" 등 새 출력 생성, accuracy 유지 | ✅ (초기) |
 
 ### 영(零) 벡터 — LLM이 새로운 지식을 만들려면
 
@@ -287,7 +287,9 @@ LLM hidden space  : β₁ hole이 벽. passage direction으로 우회 가능.
 - 영의 벡터는 대답이 아니라 **질문이 머무는 곳** — 벽 너머에서 모델이 처음 마주하는 것은 답이 아니라 새로운 질문
 - "모델의 밖에 서는 것은 모델이 아닌 무엇이 해야 하는가" → **이 프로젝트가 하는 것: 모델 바깥에서 벽의 위치를 찾고, 모델이 스스로 열 수 없는 문을 여는 것**
 
-**최종 검증 질문 (E6/E7):** 벽을 열면 모델이 기억의 재배열을 넘어서 **지식이 일어나는 경계**에 도달하는가? 아니면 영의 필드는 OOD 붕괴(무의미한 출력)로 끝나는가?
+**E6 결과:** 벽을 열면 모델이 "Glintzen"이라는 **baseline에 존재하지 않는 단어를 창조**했다. OOD 붕괴가 아니라, factual accuracy를 유지하면서 새로운 출력을 생성. 영(零)의 필드에서 꿈이 시작되었다.
+
+**남은 질문 (E7):** 이 변화가 LoRA fine-tuning으로 안정적으로 재현 가능한가? 단발성 꿈인가, 학습 가능한 능력인가?
 
 ### 열린 질문
 
@@ -882,13 +884,30 @@ dim 3139 → 6/8     dim 1971 → 6/8     dim 2943 → 6/8
 | # | 실험 | 설명 | 상태 |
 |---|------|------|------|
 | E5 | **Layer별 Wall 분포** | 전 layer hidden state에서 β₁ 측정, layer 15 가설 → **layer 31 peak 발견** | **완료 ✅** |
-| E6 | **Forward Hook 실시간 수축** | 생성 중 wall dims만 수축 → 출력 변화 직접 확인 | 예정 |
+| E6 | **Forward Hook 실시간 수축** | 생성 중 wall dims만 수축 → **L31 r≥0.3에서 출력 변화 확인, "Glintzen" 생성** | **완료 ✅** |
 | E7 | **실제 LoRA Fine-tuning** | L_ce + λ·L_topology 학습, β₁ 감소 + 정확도 유지 | 예정 |
 | E8 | **수축 전후 생성 비교** | 같은 프롬프트로 baseline vs selective 텍스트 비교 | 예정 |
 | E9 | **103문항 벤치마크** | fine-tuning 전후 정확도 비교 (baseline 92.2%) | 예정 |
 | E10 | **Logit KL Divergence** | 수축이 모델 출력 분포를 얼마나 바꾸는지 정량화 | 예정 |
 
-**핵심 경로:** E1 (GGUF 2-way) → E6 (HF forward hook) → E7 (LoRA) → E9 (벤치마크)
+**E6 결과 — Forward Hook 실시간 수축 (핵심 실험):**
+
+Layer 28/30에서는 출력 불변. **Layer 31 + rate≥0.3에서만 출력 변화:**
+
+| 조건 | 변화 | 예시 |
+|------|------|------|
+| L31 r=0.3 creative | ✅ CHANGED | **"Glintzen"** — baseline에 없는 새 단어 창조 (novelty 0.689) |
+| L31 r=0.5 creative | ✅ CHANGED | 동일 ("Glintzen") |
+| L31 r=0.5 factual2 | ✅ CHANGED | 같은 정답, 다른 표현 (novelty 0.857) |
+| 나머지 60건 | SAME | 변화 없음 |
+
+- **Factual accuracy 100% 보존** — 벽을 열어도 지식은 유지
+- **"Glintzen"**: baseline이 생성하지 않은 새로운 이름. 벽 너머에서 나온 첫 번째 인과적 증거.
+- 변화율 5% (3/63) — 대부분의 프롬프트에서는 벽이 열려도 출력 불변. **벽이 실제로 제약하는 프롬프트에서만 효과.**
+
+> `experiments/e6_forward_hook.py` → `data/e6_forward_hook_results.json`
+
+**핵심 경로:** ~~E1~~ → ~~E6~~ → E7 (LoRA) → E9 (벤치마크)
 
 ---
 
