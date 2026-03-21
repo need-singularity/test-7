@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "initial_beta1": "2.88 ± 0.60",
+    "final_beta1": "2.88 ± 0.60",
+    "beta1_reduction": "0.0%",
+    "final_max_persistence": "0.6732 ± 0.0988",
+    "final_total_persistence": "1.6341 ± 0.4320",
+    "collateral_damage": "0.0000 ± 0.0000",
+    "wall_signal_initial": "1.3761",
+    "wall_signal_final": "1.3761",
+    "wall_signal_reduction": "0.0%",
+    "nonwall_signal_initial": "0.4458",
+    "nonwall_signal_final": "0.4458",
+    "nonwall_signal_change": "0.0%"
+  },
+  "global": {
+    "initial_beta1": "2.88 ± 0.60",
+    "final_beta1": "2.50 ± 0.50",
+    "beta1_reduction": "13.0%",
+    "final_max_persistence": "0.0958 ± 0.0141",
+    "final_total_persistence": "0.2279 ± 0.0661",
+    "collateral_damage": "0.3823 ± 0.0050",
+    "wall_signal_initial": "1.3761",
+    "wall_signal_final": "0.1957",
+    "wall_signal_reduction": "85.8%",
+    "nonwall_signal_initial": "0.4458",
+    "nonwall_signal_final": "0.0634",
+    "nonwall_signal_change": "-85.8%"
+  },
+  "selective": {
+    "initial_beta1": "2.88 ± 0.60",
+    "final_beta1": "0.00 ± 0.00",
+    "beta1_reduction": "100.0%",
+    "final_max_persistence": "0.0000 ± 0.0000",
+    "final_total_persistence": "0.0000 ± 0.0000",
+    "collateral_damage": "0.0000 ± 0.0000",
+    "wall_signal_initial": "1.3761",
+    "wall_signal_final": "0.1957",
+    "wall_signal_reduction": "85.8%",
+    "nonwall_signal_initial": "0.4458",
+    "nonwall_signal_final": "0.4458",
+    "nonwall_signal_change": "0.0%"
+  }
+}
