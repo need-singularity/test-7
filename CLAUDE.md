@@ -16,6 +16,12 @@
 ## Python Environment
 - 이 프로젝트에 .venv 없음. hamster-ball venv 사용: `/Users/ghost/Dev/hamster-ball/.venv/bin/python`
 
+## Remote (Windows PC)
+- 접속 정보: `.local/windows-pc.md` 참조 (gitignore됨)
+- GPU 실험은 `--cpu` 플래그로 CPU/GPU 선택 가능
+- 윈도우 콘솔은 cp949 인코딩 → 유니코드 특수문자 사용 금지, ASCII로 대체
+
 ## Git
+- **PUBLIC REPO** — IP, 비밀번호, 토큰 등 민감 정보 커밋 금지. `.local/`에만 보관
 - main 브랜치에서 작업
 - 실험 추가 시 README Planned Experiments 테이블 업데이트

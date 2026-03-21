@@ -3,6 +3,20 @@ E8: Novelty Verification — Is it new knowledge or just noise?
 ==============================================================
 Same prompt, baseline 50x vs wall-removed 50x.
 Measures: trigram novelty, semantic validity, repeatability.
+
+Usage:
+    python e8_novelty_test.py          # GPU (fp16 + CPU offload, Blackwell safe)
+    python e8_novelty_test.py --cpu    # CPU only (fp16, no GPU)
+
+Note:
+    bitsandbytes 4-bit quantization은 Blackwell (sm_120) 미지원.
+    RTX 5070 등에서는 fp16 + CPU offload 방식을 사용해야 함.
+    # bnb_config = BitsAndBytesConfig(
+    #     load_in_4bit=True,
+    #     bnb_4bit_quant_type="nf4",
+    #     bnb_4bit_compute_dtype=torch.float16,
+    #     bnb_4bit_use_double_quant=True,
+    # )
 """
 
 import numpy as np
@@ -119,15 +133,15 @@ def analyze_novelty(baseline_samples, adapted_samples):
 
 def main():
     import argparse
-    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+    from transformers import AutoModelForCausalLM, AutoTokenizer
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--cpu", action="store_true", help="Force CPU mode (no GPU)")
+    parser.add_argument("--cpu", action="store_true", help="CPU only (fp16)")
     args = parser.parse_args()
 
     if args.cpu or not torch.cuda.is_available():
         device = "cpu"
-        print(f"Device: {device} (manual)")
+        print(f"Device: {device}")
         print("\nLoading model (fp16 on CPU)...")
         t0 = time.time()
         tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -139,20 +153,15 @@ def main():
         )
     else:
         device = "cuda"
-        print(f"Device: {device}")
-        print("\nLoading model (4-bit on GPU)...")
+        print(f"Device: {device} (fp16 + CPU offload)")
+        print("\nLoading model (fp16, auto split GPU/CPU)...")
         t0 = time.time()
-        bnb_config = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_quant_type="nf4",
-            bnb_4bit_compute_dtype=torch.float16,
-            bnb_4bit_use_double_quant=True,
-        )
         tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
         model = AutoModelForCausalLM.from_pretrained(
             MODEL_ID,
-            quantization_config=bnb_config,
+            torch_dtype=torch.float16,
             device_map="auto",
+            max_memory={"0": "10GiB", "cpu": "20GiB"},
             low_cpu_mem_usage=True,
         )
 

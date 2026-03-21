@@ -3,6 +3,9 @@ E7: LoRA Fine-tuning with Topology Loss (GPU version)
 =====================================================
 Windows PC (RTX 5070, 12GB VRAM) 에서 실행.
 4-bit quantization으로 VRAM 12GB 안에 맞춤.
+
+Usage:
+    python e7_lora_finetune_gpu.py     # GPU (4-bit quantized)
 """
 
 import numpy as np
