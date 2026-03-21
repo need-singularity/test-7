@@ -651,10 +651,27 @@ Wall wins 3/5. 단, reasoning에서 wall 수축이 새 hole을 생성하는 역�
 
 | # | 실험 | 설명 | 상태 |
 |---|------|------|------|
-| E1 | **2-Way Embedding 수축** | Baseline vs Selective: 실제 hidden state에서 wall dims 수축 전후 β₁/persistence 비교 | 예정 |
+| E1 | **3-Way Embedding 수축** | Baseline vs Global vs Selective: 실제 hidden state에서 8 프롬프트 × 8 α sweep | **완료 ✅** |
 | E2 | **수축 강도별 품질** | α=0.05~0.50 sweep, factual 정확도 + novelty 측정 | 예정 |
 | E3 | **카테고리별 Wall Neuron 일관성** | creative/factual/reasoning/boundary 간 wall dims 겹침 분석 | 예정 |
 | E4 | **Embedding 변형량 정량화** | 수축 전후 cosine similarity, L2 distance, 구조 보존 지표 | 예정 |
+
+**E1 결과 (실제 Llama 8B, 3-way):**
+
+| 카테고리 | Baseline β₁ | Global β₁ | **Selective β₁** | Winner |
+|---------|------------|----------|-----------------|--------|
+| creative | 6 | 6 | **5** | Selective |
+| creative2 | 7 | 7 | **5** | Selective |
+| factual | 4 | 4 | **3** | Selective |
+| factual2 | 5 | 5 | **4** | Selective |
+| reasoning | 6 | 6 | **6** | Selective (nw 보존) |
+| reasoning2 | 7 | 7 | **6** | Selective |
+| boundary | 3 | 3 | **1** | Selective |
+| boundary2 | 3 | 3 | **2** | Selective |
+
+Global은 β₁을 전혀 못 줄임 (8/8 baseline과 동일). Selective 8/8 승리, non-wall 0% 손상.
+
+> `experiments/e1_2way_embedding.py` → `data/e1_2way_results.json`
 
 ### HF 모델 기반 (모델 준비됨)
 
@@ -686,4 +703,5 @@ Wall wins 3/5. 단, reasoning에서 wall 수축이 새 hole을 생성하는 역�
 4. ~~**생성 검증**: baseline 대비 n-gram 참신성 > 92%, 어휘 다양성 증가~~ ✅
 5. ~~**3-Way 비교**: baseline(불변) vs global(−13%, 파괴) vs selective(−100%, 보존)~~ ✅ **Selective 압승**
 6. ~~**수학 검증**: T1-T5 전항목 통과, 실제 모델에서 PH 구조 유의성 확인~~ ✅
-7. **HF 모델 실험**: E5-E10 예정
+7. ~~**E1 실제 모델 3-Way**: Global β₁ 불변, Selective 8/8 승리~~ ✅
+8. **HF 모델 실험**: E5-E10 예정
