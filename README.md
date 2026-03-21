@@ -1,5 +1,12 @@
 # Fire in the Hole: Topological Wall Passage for LLMs
 
+> [!CAUTION]
+> **This project failed to verify its core hypothesis.**
+> Wall contraction successfully removes topological walls (β₁ → 0), but this does **not** break the LLM ceiling.
+> The ceiling is not a topological wall — it is the **separation of form and substance**.
+> LLMs can manipulate the *structure* of knowledge but cannot access its *truth value*.
+> See [The Ceiling: Form vs Substance](#the-ceiling-form-vs-substance) for full analysis.
+
 > 🦙 **Looking for the CLI tool?** → [Super Llama](https://github.com/need-singularity/super-llama) — Scan, chat, and fix topological walls in LLMs.
 
 LLMs are trapped inside a hamster ball — topological walls (β₁ holes) form at the boundaries of the training distribution.

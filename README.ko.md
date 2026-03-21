@@ -1,5 +1,12 @@
 # Fire in the Hole: Topological Wall Passage for LLMs
 
+> [!CAUTION]
+> **이 프로젝트는 핵심 가설 검증에 실패했습니다.**
+> 벽 수축은 위상적 벽을 성공적으로 제거하지만 (β₁ → 0), LLM의 천장을 깨지는 **못합니다.**
+> 천장은 위상적 벽이 아니라 **형식과 내용의 분리**입니다.
+> LLM은 지식의 *구조*를 조작할 수 있지만, *진리값*에는 접근할 수 없습니다.
+> 전체 분석은 [천장: 형식 vs 내용](#천장-형식-vs-내용) 참고.
+
 > 🦙 **Looking for the CLI tool?** → [Super Llama](https://github.com/need-singularity/super-llama) — Scan, chat, and fix topological walls in LLMs.
 
 LLM은 햄스터 볼 안에 갇혀 있다 — 학습 분포의 경계에서 위상적 벽(β₁ hole)이 형성된다.
