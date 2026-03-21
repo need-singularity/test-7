@@ -17,7 +17,7 @@ from peft import LoraConfig, get_peft_model
 import warnings
 warnings.filterwarnings("ignore")
 
-MODEL_ID = "C:/Users/aiden/models/llama-3.1-8b-instruct"
+MODEL_ID = "C:/Users/aiden/models/llama-3.1-8b-instruct-hf"
 OUTPUT_PATH = Path("e7_lora_gpu_results.json")
 
 CORE_WALL_DIMS = [782, 977, 1917, 1971, 2720, 2943, 3139, 4080]
@@ -127,15 +127,15 @@ def main():
 
         acc = ep["answer"].lower() in response.lower() if ep["answer"] else None
         pre_results.append({"category": ep["category"], "prompt": ep["text"], "response": response, "accuracy": acc})
-        acc_str = "✓" if acc else ("✗" if acc is not None else "—")
+        acc_str = "O" if acc else ("X" if acc is not None else "-")
         print(f"  {acc_str} [{ep['category']}] {response[:80]}...")
 
     pre_factual = sum(1 for r in pre_results if r["accuracy"] is True)
     pre_total = sum(1 for r in pre_results if r["accuracy"] is not None)
     print(f"  Pre-training accuracy: {pre_factual}/{pre_total}")
 
-    # ── Measure pre-training β₁
-    print("\n── Pre-training β₁")
+    # ── Measure pre-training b1
+    print("\n── Pre-training b1")
     pre_b1s = []
     for prompt_text in TRAIN_PROMPTS[:3]:
         inputs = tokenizer(prompt_text, return_tensors="pt").to(device)
@@ -144,7 +144,7 @@ def main():
         hs = outputs.hidden_states[-1][0].float().cpu().numpy()
         b1, mp, tp = compute_ph(hs)
         pre_b1s.append({"prompt": prompt_text[:40], "beta1": b1, "max_pers": mp})
-        print(f"  β₁={b1}, mp={mp:.4f} — {prompt_text[:40]}...")
+        print(f"  b1={b1}, mp={mp:.4f} - {prompt_text[:40]}...")
 
     # ── Setup LoRA
     print("\n── Setting up LoRA")
@@ -230,15 +230,15 @@ def main():
 
         acc = ep["answer"].lower() in response.lower() if ep["answer"] else None
         post_results.append({"category": ep["category"], "prompt": ep["text"], "response": response, "accuracy": acc})
-        acc_str = "✓" if acc else ("✗" if acc is not None else "—")
+        acc_str = "O" if acc else ("X" if acc is not None else "-")
         print(f"  {acc_str} [{ep['category']}] {response[:80]}...")
 
     post_factual = sum(1 for r in post_results if r["accuracy"] is True)
     post_total = sum(1 for r in post_results if r["accuracy"] is not None)
     print(f"  Post-training accuracy: {post_factual}/{post_total}")
 
-    # ── Post-training β₁
-    print("\n── Post-training β₁")
+    # ── Post-training b1
+    print("\n── Post-training b1")
     post_b1s = []
     for prompt_text in TRAIN_PROMPTS[:3]:
         inputs = tokenizer(prompt_text, return_tensors="pt").to(device)
@@ -247,11 +247,11 @@ def main():
         hs = outputs.hidden_states[-1][0].float().cpu().numpy()
         b1, mp, tp = compute_ph(hs)
         post_b1s.append({"prompt": prompt_text[:40], "beta1": b1, "max_pers": mp})
-        print(f"  β₁={b1}, mp={mp:.4f} — {prompt_text[:40]}...")
+        print(f"  b1={b1}, mp={mp:.4f} - {prompt_text[:40]}...")
 
     # ── Summary
     print("\n\n" + "=" * 70)
-    print("E7 SUMMARY — LoRA Fine-tuning with Topology Loss (GPU)")
+    print("E7 SUMMARY - LoRA Fine-tuning with Topology Loss (GPU)")
     print("=" * 70)
 
     print(f"\n  Training: {N_EPOCHS} epochs, {len(TRAIN_PROMPTS)} prompts")
@@ -264,8 +264,8 @@ def main():
 
     print(f"\n  Factual accuracy: {pre_factual}/{pre_total} → {post_factual}/{post_total}")
 
-    print(f"\n  β₁ comparison:")
-    print(f"  {'Prompt':>40}  {'Pre β₁':>7}  {'Post β₁':>8}  {'Δ':>4}")
+    print(f"\n  b1 comparison:")
+    print(f"  {'Prompt':>40}  {'Pre b1':>7}  {'Post b1':>8}  {'Δ':>4}")
     print(f"  {'-'*62}")
     for pre, post in zip(pre_b1s, post_b1s):
         delta = post['beta1'] - pre['beta1']
