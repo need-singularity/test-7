@@ -1,5 +1,7 @@
 # Fire in the Hole: Topological Wall Passage for LLMs
 
+> 🦙 **Looking for the CLI tool?** → [Super Llama](https://github.com/need-singularity/super-llama) — Scan, chat, and fix topological walls in LLMs.
+
 LLM은 햄스터 볼 안에 갇혀 있다 — 학습 분포의 경계에서 위상적 벽(β₁ hole)이 형성된다.
 이 프로젝트는 persistent homology로 벽을 감지하고, **wall neuron만 선택적으로 수축**시켜 벽을 제거한다.
 
@@ -928,9 +930,3 @@ Layer 28/30에서는 출력 불변. **Layer 31 + rate≥0.3에서만 출력 변�
 6. ~~**수학 검증**: T1-T5 전항목 통과, 실제 모델에서 PH 구조 유의성 확인~~ ✅
 7. ~~**E1 실제 모델 3-Way**: Global β₁ 불변, Selective 8/8 승리~~ ✅
 8. **HF 모델 실험**: E5-E10 예정
-
----
-
-## 🔗 Related
-
-- [🦙 Super Llama](https://github.com/need-singularity/super-llama) — CLI tool built from this research. Scan, chat, and fix topological walls in LLMs.
